@@ -34,3 +34,9 @@ GitHub → Settings → Pages → Deploy from a branch → `main` / `(root)`.
 - Language choice is saved in the browser (`localStorage`). You can force it with `?lang=fa` or `?lang=en`.
 - The FPS Estimator is a simple heuristic, not a benchmark.
 - Fonts (Inter, Vazirmatn) load from Google Fonts. To avoid that, download them and serve them from this repo with `@font-face`.
+
+## Using your own cover images
+
+Create a `covers` folder next to `index.html` and add images named after the game id, for example `covers/valorant.jpg`
+(portrait, about 3:4, e.g. 600×800). The site shows your image automatically; games without an image keep the generated artwork.
+The ids are the `id` values in `games.js` (`cs2`, `gta5`, `eldenring`, `bg3`, ...).

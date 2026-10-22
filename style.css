@@ -307,3 +307,16 @@ html[lang="fa"] .game-tags i,html[lang="fa"] .game-size{font-size:11px}
   .bottom-nav a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;color:#a6a0b8;min-width:60px}.bottom-nav a span{font-size:18px;color:var(--purple)}.bottom-nav b{font-weight:700}
   .toast{bottom:84px}
 }
+
+/* ===== v2.3 fixes ===== */
+.ico{display:inline-block;vertical-align:-.17em;flex:none}
+.fav-btn{display:grid;place-items:center;padding:0}
+.chip{display:inline-flex;align-items:center;gap:6px}
+.cover-wrap{display:block;position:relative;aspect-ratio:3/4;overflow:hidden}
+.cover-wrap>svg,.cover-wrap>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;aspect-ratio:auto}
+.gm-cover .cover-wrap,.pop-card .cover-wrap{width:100%}
+.bottom-nav a span{display:grid;place-items:center}
+.quick span{display:block}
+
+.reveal.done{transition:transform .25s,border-color .25s,opacity .25s;transition-delay:0s}
+.cover-wrap{direction:ltr}
