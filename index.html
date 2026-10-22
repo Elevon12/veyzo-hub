@@ -4,67 +4,165 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0810">
-  <meta name="description" content="Veyzo Hub — clean, fast tools built for gamers.">
+  <meta name="color-scheme" content="dark">
   <title>Veyzo Hub — Tools for Gamers</title>
+  <meta name="description" id="metaDescription" content="Veyzo Hub — clean, fast tools built for gamers. eDPI calculator, storage planner, game picker and FPS estimator. Free, in your browser.">
+  <link rel="canonical" href="https://elevon12.github.io/veyzo-hub/">
+
+  <!-- Icons & manifest -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Veyzo Hub">
+  <meta property="og:title" content="Veyzo Hub — Tools for Gamers">
+  <meta property="og:description" content="Small, useful tools for your gaming setup. No downloads. No clutter.">
+  <meta property="og:url" content="https://elevon12.github.io/veyzo-hub/">
+  <meta property="og:image" content="https://elevon12.github.io/veyzo-hub/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Veyzo Hub — Tools for Gamers">
+  <meta name="twitter:description" content="Small, useful tools for your gaming setup. No downloads. No clutter.">
+  <meta name="twitter:image" content="https://elevon12.github.io/veyzo-hub/og-image.png">
+
+  <!-- Fonts (Inter for English, Vazirmatn for Persian). The site still works if these fail to load. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Vazirmatn:wght@400;500;700;800&display=swap">
+
   <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Veyzo Hub","url":"https://elevon12.github.io/veyzo-hub/","inLanguage":["en","fa"],"description":"Clean, fast tools built for gamers."}
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
   <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+
   <header class="topbar">
-    <a class="brand" href="#" aria-label="Veyzo Hub home"><span class="brand-mark">V</span><span>VEYZO<span class="brand-light">HUB</span></span></a>
-    <nav><a href="#tools" data-i18n="navTools">Tools</a><a href="#about" data-i18n="navAbout">About</a></nav>
-    <div class="top-actions"><button id="languageToggle" class="language-toggle" type="button" aria-label="Switch language">فارسی</button><a class="top-cta" href="#tools"><span data-i18n="explore">Explore tools</span> <span>↗</span></a></div>
+    <a class="brand" href="#top" aria-label="Veyzo Hub home"><span class="brand-mark">V</span><span>VEYZO<span class="brand-light">HUB</span></span></a>
+    <nav aria-label="Main"><a href="#tools" data-i18n="navTools">Tools</a><a href="#about" data-i18n="navAbout">About</a></nav>
+    <div class="top-actions">
+      <button id="languageToggle" class="language-toggle" type="button" lang="fa" aria-label="تغییر زبان به فارسی">فارسی</button>
+      <a class="top-cta" href="#tools"><span data-i18n="explore">Explore tools</span> <span class="arr arr-flip" aria-hidden="true">↗</span></a>
+    </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="eyebrow"><span class="pulse"></span><span data-i18n="heroEyebrow">YOUR GAMING TOOLKIT</span></div>
       <h1 data-i18n-html="heroTitle">Play smarter.<br><span>Level up.</span></h1>
       <p class="hero-copy" data-i18n="heroCopy">Small, useful tools for your gaming setup — all in one place. No downloads. No clutter. Just get in and play.</p>
-      <div class="hero-actions"><a class="button button-primary" href="#tools"><span data-i18n="explore">Explore tools</span><span>↓</span></a><a class="text-link" href="#about"><span data-i18n="aboutLink">What is Veyzo Hub?</span> <span>↗</span></a></div>
-      <div class="hero-stats"><div><strong>04</strong><span data-i18n="statTools">TOOLS TO EXPLORE</span></div><div><strong>0</strong><span data-i18n="statDownloads">DOWNLOADS NEEDED</span></div><div><strong>100%</strong><span data-i18n="statBrowser">BROWSER-BASED</span></div></div>
-      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orb-core">V<span>.</span></div><div class="floating-chip chip-top">READY TO PLAY</div><div class="floating-chip chip-bottom"><span class="tiny-dot"></span> SYSTEM ONLINE</div><div class="crosshair">+</div></div>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#tools"><span data-i18n="explore">Explore tools</span><span class="arr" aria-hidden="true">↓</span></a>
+        <a class="text-link" href="#about"><span data-i18n="aboutLink">What is Veyzo Hub?</span> <span class="arr arr-flip" aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>04</strong><span data-i18n="statTools">TOOLS TO EXPLORE</span></div>
+        <div><strong>0</strong><span data-i18n="statDownloads">DOWNLOADS NEEDED</span></div>
+        <div><strong>100%</strong><span data-i18n="statBrowser">BROWSER-BASED</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="orb-core">V<span>.</span></div>
+        <div class="floating-chip chip-top" data-i18n="chipReady">READY TO PLAY</div>
+        <div class="floating-chip chip-bottom"><span class="tiny-dot"></span> <span data-i18n="chipOnline">SYSTEM ONLINE</span></div>
+        <div class="crosshair">+</div>
+      </div>
     </section>
 
     <section id="tools" class="tools-section">
-      <div class="section-heading"><div><div class="eyebrow" data-i18n="toolbox">THE TOOLBOX</div><h2 data-i18n-html="sectionTitle">Tools built for <span>your game.</span></h2></div><label class="search-wrap"><span>⌕</span><input id="toolSearch" type="search" data-i18n-placeholder="searchTools" placeholder="Search tools..." aria-label="Search tools"></label></div>
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow" data-i18n="toolbox">THE TOOLBOX</div>
+          <h2 data-i18n-html="sectionTitle">Tools built for <span>your game.</span></h2>
+        </div>
+        <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="toolSearch" type="search" autocomplete="off" data-i18n-placeholder="searchTools" data-i18n-aria="searchTools" placeholder="Search tools..." aria-label="Search tools"></label>
+      </div>
+
       <div class="tool-grid" id="toolGrid">
-        <article class="tool-card featured" data-search="sensitivity mouse dpi edpi calculator valorant cs2">
-          <div class="card-top"><span class="tool-icon icon-purple">⌖</span><span class="tag" data-i18n="popular">POPULAR</span></div>
+        <article class="tool-card featured" data-search="sensitivity mouse dpi edpi calculator valorant cs2 حساسیت موس">
+          <div class="card-top"><span class="tool-icon icon-purple" aria-hidden="true">⌖</span><span class="tag" data-i18n="popular">POPULAR</span></div>
           <div class="card-art art-target" aria-hidden="true"><span></span><i></i><b></b></div>
-          <div class="card-content"><div class="tool-type" data-i18n="aimControl">AIM & CONTROL</div><h3 data-i18n="sensitivityTitle">Sensitivity Lab</h3><p data-i18n="sensitivityDesc">Calculate your eDPI and compare mouse sensitivity settings in seconds.</p><button class="card-link open-tool" data-tool="sensitivity"><span data-i18n="openTool">Open tool</span> <span>↗</span></button></div>
+          <div class="card-content">
+            <div class="tool-type" data-i18n="aimControl">AIM &amp; CONTROL</div>
+            <h3 data-i18n="sensitivityTitle">Sensitivity Lab</h3>
+            <p data-i18n="sensitivityDesc">Calculate your eDPI and compare mouse sensitivity settings in seconds.</p>
+            <button class="card-link open-tool" type="button" data-tool="sensitivity"><span data-i18n="openTool">Open tool</span> <span class="arr arr-flip" aria-hidden="true">↗</span></button>
+          </div>
         </article>
-        <article class="tool-card" data-search="storage game disk size drive space calculator">
-          <div class="card-top"><span class="tool-icon icon-blue">▤</span><span class="tag tag-new" data-i18n="quickTool">QUICK TOOL</span></div>
+
+        <article class="tool-card" data-search="storage game disk size drive space calculator ssd hdd فضا ذخیره سازی حافظه حجم">
+          <div class="card-top"><span class="tool-icon icon-blue" aria-hidden="true">▤</span><span class="tag tag-new" data-i18n="quickTool">QUICK TOOL</span></div>
           <div class="card-art art-storage" aria-hidden="true"><div class="drive"><span></span><span></span><span></span></div><div class="drive-glow"></div></div>
-          <div class="card-content"><div class="tool-type" data-i18n="pcStorage">PC & STORAGE</div><h3 data-i18n="storageTitle">Storage Planner</h3><p data-i18n="storageDesc">Add up game sizes and check how much disk space your library needs.</p><button class="card-link open-tool" data-tool="storage"><span data-i18n="openTool">Open tool</span> <span>↗</span></button></div>
+          <div class="card-content">
+            <div class="tool-type" data-i18n="pcStorage">PC &amp; STORAGE</div>
+            <h3 data-i18n="storageTitle">Storage Planner</h3>
+            <p data-i18n="storageDesc">Add up game sizes and check how much disk space your library needs.</p>
+            <button class="card-link open-tool" type="button" data-tool="storage"><span data-i18n="openTool">Open tool</span> <span class="arr arr-flip" aria-hidden="true">↗</span></button>
+          </div>
         </article>
-        <article class="tool-card" data-search="random game picker choose decide bored wheel">
-          <div class="card-top"><span class="tool-icon icon-pink">✳</span><span class="tag" data-i18n="justForFun">JUST FOR FUN</span></div>
+
+        <article class="tool-card" data-search="random game picker choose decide bored wheel انتخاب بازی قرعه">
+          <div class="card-top"><span class="tool-icon icon-pink" aria-hidden="true">✳</span><span class="tag" data-i18n="justForFun">JUST FOR FUN</span></div>
           <div class="card-art art-random" aria-hidden="true"><div class="dice">?</div><span class="spark spark-one">✦</span><span class="spark spark-two">✧</span></div>
-          <div class="card-content"><div class="tool-type" data-i18n="gameNight">GAME NIGHT</div><h3 data-i18n="pickerTitle">Game Picker</h3><p data-i18n="pickerDesc">Can't decide what to play? Add your games and let fate choose.</p><button class="card-link open-tool" data-tool="picker"><span data-i18n="openTool">Open tool</span> <span>↗</span></button></div>
+          <div class="card-content">
+            <div class="tool-type" data-i18n="gameNight">GAME NIGHT</div>
+            <h3 data-i18n="pickerTitle">Game Picker</h3>
+            <p data-i18n="pickerDesc">Can't decide what to play? Add your games and let fate choose.</p>
+            <button class="card-link open-tool" type="button" data-tool="picker"><span data-i18n="openTool">Open tool</span> <span class="arr arr-flip" aria-hidden="true">↗</span></button>
+          </div>
         </article>
-        <article class="tool-card fps-card" data-search="fps estimator frames per second performance gpu cpu ram game graphics settings resolution">
-          <div class="card-top"><span class="tool-icon icon-purple">⌁</span><span class="tag tag-new" data-i18n="newTool">NEW TOOL</span></div>
+
+        <article class="tool-card fps-card" data-search="fps estimator frames per second performance gpu cpu ram game graphics settings resolution فریم کارایی گرافیک پردازنده">
+          <div class="card-top"><span class="tool-icon icon-purple" aria-hidden="true">⌁</span><span class="tag tag-new" data-i18n="newTool">NEW TOOL</span></div>
           <div class="card-art art-fps" aria-hidden="true"><div class="fps-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="fps-orbit"></div></div>
-          <div class="card-content"><div class="tool-type" data-i18n="performance">PERFORMANCE</div><h3 data-i18n="fpsTitle">FPS Estimator</h3><p data-i18n="fpsDesc">Get a rough FPS estimate for your hardware, game and graphics settings.</p><button class="card-link open-tool" data-tool="fps"><span data-i18n="openTool">Open tool</span> <span>↗</span></button></div>
+          <div class="card-content">
+            <div class="tool-type" data-i18n="performance">PERFORMANCE</div>
+            <h3 data-i18n="fpsTitle">FPS Estimator</h3>
+            <p data-i18n="fpsDesc">Get a rough FPS estimate for your hardware, game and graphics settings.</p>
+            <button class="card-link open-tool" type="button" data-tool="fps"><span data-i18n="openTool">Open tool</span> <span class="arr arr-flip" aria-hidden="true">↗</span></button>
+          </div>
         </article>
       </div>
-      <p id="noResults" class="no-results" hidden data-i18n="noResults">No tools match that search. Try another keyword.</p>
+      <p id="noResults" class="no-results" role="status" hidden data-i18n="noResults">No tools match that search. Try another keyword.</p>
     </section>
 
-    <section id="about" class="about-section"><div class="about-symbol">V<span>.</span></div><div><div class="eyebrow" data-i18n="builtFor">BUILT FOR THE PLAYERS</div><h2 data-i18n-html="aboutTitle">Less setup.<br><span>More game time.</span></h2><p data-i18n="aboutCopy">Veyzo Hub is a growing collection of lightweight gaming utilities. This first version runs right in your browser, and your inputs stay on your device.</p></div><div class="about-note"><span class="tiny-dot"></span> <span data-i18n="version">VERSION 2.0</span> <span class="note-line"></span> <span data-i18n="madeFor">MADE FOR GAMERS</span></div></section>
+    <section id="about" class="about-section">
+      <div class="about-symbol" aria-hidden="true">V<span>.</span></div>
+      <div>
+        <div class="eyebrow" data-i18n="builtFor">BUILT FOR THE PLAYERS</div>
+        <h2 data-i18n-html="aboutTitle">Less setup.<br><span>More game time.</span></h2>
+        <p data-i18n="aboutCopy">Veyzo Hub is a growing collection of lightweight gaming utilities. This first version runs right in your browser, and your inputs stay on your device.</p>
+      </div>
+      <div class="about-note"><span class="tiny-dot"></span> <span data-i18n="version">VERSION 2.1</span> <span class="note-line"></span> <span data-i18n="madeFor">MADE FOR GAMERS</span></div>
+    </section>
   </main>
 
-  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">V</span><span>VEYZO<span class="brand-light">HUB</span></span></a><span data-i18n="footerTag">Play smarter. Level up.</span><span>© <span id="year"></span> VEYZO HUB</span></footer>
+  <noscript>
+    <p style="max-width:640px;margin:0 auto 40px;padding:0 28px;color:#a6a0b8;font-size:14px">Veyzo Hub needs JavaScript to run its tools. Please enable JavaScript and reload the page. / برای استفاده از ابزارها باید جاوااسکریپت فعال باشد.</p>
+  </noscript>
+
+  <footer>
+    <a class="brand footer-brand" href="#top"><span class="brand-mark">V</span><span>VEYZO<span class="brand-light">HUB</span></span></a>
+    <span data-i18n="footerTag">Play smarter. Level up.</span>
+    <span class="footer-copy">© <span id="year"></span> VEYZO HUB</span>
+  </footer>
 
   <div class="modal-backdrop" id="modalBackdrop" hidden>
-    <section class="tool-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" id="modalClose" aria-label="Close tool">×</button>
-      <div class="eyebrow" data-i18n="modalEyebrow">VEYZO HUB TOOL</div><h2 id="modalTitle">Tool</h2><p id="modalIntro" class="modal-intro"></p>
+    <section class="tool-modal" id="toolModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" data-i18n-aria="closeTool" aria-label="Close tool">×</button>
+      <div class="eyebrow" data-i18n="modalEyebrow">VEYZO HUB TOOL</div>
+      <h2 id="modalTitle">Tool</h2>
+      <p id="modalIntro" class="modal-intro"></p>
       <div id="modalBody"></div>
     </section>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
