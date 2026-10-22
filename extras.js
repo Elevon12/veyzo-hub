@@ -10,7 +10,7 @@ Object.assign(translations.en, {
   quickTitle: "Quick access", openLibrary: "Browse the library", popularTitle: "Popular picks",
   resetData: "Reset saved data", resetConfirm: "Delete all saved settings on this device?",
   libEyebrow: "GAME LIBRARY", libTitle: "Find your <span>next game.</span>", libSearch: "Search games...",
-  genAll: "All", genFps: "FPS", genBr: "Battle Royale", genOpen: "Open World", genRpg: "RPG", genSandbox: "Sandbox", genMoba: "MOBA", genSport: "Sports", genSurvival: "Survival", genRacing: "Racing", genIndie: "Indie", genFav: "Favorites",
+  genAll: "All", genFps: "FPS", genBr: "Battle Royale", genOpen: "Open World", genRpg: "RPG", genSandbox: "Sandbox", genMoba: "MOBA", genSport: "Sports", genSurvival: "Survival", genAction: "Action", genCoop: "Co-op", genRacing: "Racing", genIndie: "Indie", genFav: "Favorites",
   sortLabel: "Sort by", sortPop: "Most popular", sortName: "Name", sortSize: "Install size",
   noGames: "No games match. Try another search or genre.", gamesCount: n => `${n} games`,
   minimum: "Minimum", recommended: "Recommended", installSize: "Install size", released: "Released",
@@ -30,7 +30,7 @@ Object.assign(translations.fa, {
   quickTitle: "دسترسی سریع", openLibrary: "مشاهده‌ی کتابخانه", popularTitle: "بازی‌های محبوب",
   resetData: "پاک کردن داده‌های ذخیره‌شده", resetConfirm: "همه‌ی تنظیمات ذخیره‌شده روی این دستگاه پاک شود؟",
   libEyebrow: "کتابخانه‌ی بازی", libTitle: "<span>بازی بعدی‌ات</span> رو پیدا کن.", libSearch: "جست‌وجوی بازی...",
-  genAll: "همه", genFps: "تیراندازی", genBr: "بتل رویال", genOpen: "دنیای باز", genRpg: "نقش‌آفرینی", genSandbox: "ساندباکس", genMoba: "موبا", genSport: "ورزشی", genSurvival: "بقا", genRacing: "مسابقه‌ای", genIndie: "مستقل", genFav: "علاقه‌مندی‌ها",
+  genAll: "همه", genFps: "تیراندازی", genBr: "بتل رویال", genOpen: "دنیای باز", genRpg: "نقش‌آفرینی", genSandbox: "ساندباکس", genMoba: "موبا", genSport: "ورزشی", genSurvival: "بقا", genAction: "اکشن", genCoop: "همکاری", genRacing: "مسابقه‌ای", genIndie: "مستقل", genFav: "علاقه‌مندی‌ها",
   sortLabel: "مرتب‌سازی", sortPop: "محبوب‌ترین", sortName: "نام", sortSize: "حجم نصب",
   noGames: "بازی‌ای پیدا نشد. جست‌وجو یا سبک دیگری رو امتحان کن.", gamesCount: n => `${n} بازی`,
   minimum: "حداقل", recommended: "پیشنهادی", installSize: "حجم نصب", released: "سال انتشار",
@@ -84,7 +84,7 @@ function reveal(scope = document) {
 }
 const tierLabel = { cpu: { entry: "entryCpu", mid: "midCpu", high: "highCpu" }, gpu: { entry: "entryGpu", mid: "midGpu", high: "highGpu", enthusiast: "enthusiastGpu" } };
 const tierRank = { entry: 0, mid: 1, high: 2, enthusiast: 3 };
-const genreKey = { fps: "genFps", br: "genBr", open: "genOpen", rpg: "genRpg", sandbox: "genSandbox", moba: "genMoba", sport: "genSport", survival: "genSurvival", racing: "genRacing", indie: "genIndie" };
+const genreKey = { fps: "genFps", br: "genBr", open: "genOpen", rpg: "genRpg", sandbox: "genSandbox", moba: "genMoba", sport: "genSport", survival: "genSurvival", racing: "genRacing", indie: "genIndie", action: "genAction", coop: "genCoop" };
 const byId = id => LIB.find(g => g.id === id);
 
 /* ---------- System detection ---------- */
@@ -190,7 +190,7 @@ function renderDashboard() {
 
 /* ---------- Library ---------- */
 function renderLibrary() {
-  const genres = ["all", "fps", "br", "open", "rpg", "sandbox", "moba", "sport", "survival", "racing", "indie", "fav"];
+  const genres = ["all", "fps", "br", "open", "rpg", "sandbox", "moba", "sport", "survival", "racing", "indie", "action", "coop", "fav"];
   $("#libRoot").innerHTML = `
     <div class="section-heading"><div><div class="eyebrow">${t("libEyebrow")}</div><h2>${t("libTitle")}</h2></div>
       <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="libSearch" type="search" autocomplete="off" placeholder="${esc(t("libSearch"))}" aria-label="${esc(t("libSearch"))}" value="${esc(lib.q)}"></label></div>

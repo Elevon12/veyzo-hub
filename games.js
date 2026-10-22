@@ -36,11 +36,19 @@ const LIB = [
   { id: "palworld", n: "Palworld", g: ["survival", "open"], y: 2024, s: 40, pop: 80, c: [160, 300], m: "wave", min: ["mid", "mid", 16], rec: ["mid", "high", 32] },
   { id: "valheim", n: "Valheim", g: ["survival", "indie"], y: 2021, s: 2, pop: 77, c: [205, 150], m: "mountain", min: ["entry", "entry", 8], rec: ["mid", "mid", 16] },
   { id: "fc25", n: "EA Sports FC 25", g: ["sport"], y: 2024, s: 50, pop: 78, c: [140, 205], m: "wave", min: ["mid", "entry", 8], rec: ["mid", "mid", 12] },
-  { id: "ets2", n: "Euro Truck Simulator 2", g: ["racing"], y: 2012, s: 5, pop: 76, c: [35, 225], m: "wave", min: ["entry", "entry", 4], rec: ["mid", "mid", 8] }
+  { id: "ets2", n: "Euro Truck Simulator 2", g: ["racing"], y: 2012, s: 5, pop: 76, c: [35, 225], m: "wave", min: ["entry", "entry", 4], rec: ["mid", "mid", 8] },
+  { id: "clair", n: "Clair Obscur: Expedition 33", g: ["rpg"], y: 2025, s: 55, pop: 91, c: [215, 335], m: "diamond", min: ["mid", "mid", 16], rec: ["high", "high", 16] },
+  { id: "fh6", n: "Forza Horizon 6", g: ["racing", "open"], y: 2026, s: 100, pop: 90, c: [340, 200], m: "wave", min: ["mid", "entry", 16], rec: ["high", "high", 16] },
+  { id: "ds2", n: "Dark Souls II: SotFS", g: ["rpg", "action"], y: 2015, s: 15, pop: 80, c: [30, 250], m: "mountain", min: ["entry", "entry", 4], rec: ["mid", "entry", 8] },
+  { id: "dd2", n: "Dragon's Dogma 2", g: ["rpg", "open", "action"], y: 2024, s: 65, pop: 83, c: [10, 40], m: "mountain", min: ["mid", "mid", 16], rec: ["high", "high", 16] },
+  { id: "gowe", n: "Gears of War: E-Day", g: ["action"], y: 2026, s: 130, pop: 88, c: [220, 15], m: "target", min: ["mid", "mid", 12], rec: ["mid", "high", 16] },
+  { id: "partyanimals", n: "Party Animals", g: ["coop"], y: 2023, s: 15, pop: 82, c: [320, 45], m: "burst", min: ["entry", "entry", 8], rec: ["mid", "mid", 16] },
+  { id: "peak", n: "PEAK", g: ["coop", "indie"], y: 2025, s: 1, pop: 86, c: [175, 215], m: "mountain", min: ["entry", "entry", 8], rec: ["entry", "entry", 8] },
+  { id: "repo", n: "R.E.P.O.", g: ["coop"], y: 2025, s: 1, pop: 85, c: [130, 340], m: "orbit", min: ["entry", "entry", 8], rec: ["mid", "entry", 8] }
 ];
 
 /* Factors the FPS Estimator uses for the games above (script.js reads these) */
-const LIB_FPS_FACTORS = { eldenring: 0.7, witcher3: 0.85, lol: 1.6, rocketleague: 1.25, dota2: 1.1, bg3: 0.55, pubg: 0.75, r6: 1.1, rust: 0.6, terraria: 2.2, stardew: 2.5, forza5: 0.6, hades: 1.8, hollow: 2.4, genshin: 0.9, hogwarts: 0.5, starfield: 0.45, helldivers2: 0.55, palworld: 0.55, valheim: 0.8, fc25: 1.0, ets2: 1.4 };
+const LIB_FPS_FACTORS = { eldenring: 0.7, witcher3: 0.85, lol: 1.6, rocketleague: 1.25, dota2: 1.1, bg3: 0.55, pubg: 0.75, r6: 1.1, rust: 0.6, terraria: 2.2, stardew: 2.5, forza5: 0.6, hades: 1.8, hollow: 2.4, genshin: 0.9, hogwarts: 0.5, starfield: 0.45, helldivers2: 0.55, palworld: 0.55, valheim: 0.8, fc25: 1.0, ets2: 1.4, clair: 0.75, fh6: 0.5, ds2: 1.3, dd2: 0.45, gowe: 0.5, partyanimals: 1.2, peak: 1.8, repo: 1.6 };
 
 function motifSVG(m, a, b) {
   const s = `hsl(${a} 90% 78%)`, w = `hsl(${b} 90% 80%)`;
