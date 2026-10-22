@@ -12,6 +12,8 @@ Static site (HTML, CSS, JavaScript), English and Persian, no build step, no back
 | `index.html` | Page structure, SEO and social meta tags |
 | `style.css` | All styling (supports RTL for Persian) |
 | `script.js` | Language switch, search, and the four tools |
+| `games.js` | Game library data (16 games) + generated cover art. Add a game by adding one line to `LIB`. |
+| `extras.js` | Dashboard, Game Library, saved settings, animations |
 | `404.html` | Custom "page not found" page (GitHub Pages uses it automatically) |
 | `favicon.svg`, `apple-touch-icon.png` | Site icons |
 | `og-image.png` | Preview image when the link is shared |

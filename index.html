@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Vazirmatn:wght@400;500;700;800&display=swap">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.2">
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"Veyzo Hub","url":"https://elevon12.github.io/veyzo-hub/","inLanguage":["en","fa"],"description":"Clean, fast tools built for gamers."}
@@ -45,7 +45,7 @@
 
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Veyzo Hub home"><span class="brand-mark">V</span><span>VEYZO<span class="brand-light">HUB</span></span></a>
-    <nav aria-label="Main"><a href="#tools" data-i18n="navTools">Tools</a><a href="#about" data-i18n="navAbout">About</a></nav>
+    <nav aria-label="Main"><a href="#dashboard" data-i18n="navDashboard">Dashboard</a><a href="#library" data-i18n="navLibrary">Library</a><a href="#tools" data-i18n="navTools">Tools</a><a href="#about" data-i18n="navAbout">About</a></nav>
     <div class="top-actions">
       <button id="languageToggle" class="language-toggle" type="button" lang="fa" aria-label="تغییر زبان به فارسی">فارسی</button>
       <a class="top-cta" href="#tools"><span data-i18n="explore">Explore tools</span> <span class="arr arr-flip" aria-hidden="true">↗</span></a>
@@ -74,6 +74,10 @@
         <div class="crosshair">+</div>
       </div>
     </section>
+
+    <section id="dashboard" class="dash-section"><div id="dashRoot"></div></section>
+
+    <section id="library" class="lib-section"><div id="libRoot"></div></section>
 
     <section id="tools" class="tools-section">
       <div class="section-heading">
@@ -139,7 +143,7 @@
         <h2 data-i18n-html="aboutTitle">Less setup.<br><span>More game time.</span></h2>
         <p data-i18n="aboutCopy">Veyzo Hub is a growing collection of lightweight gaming utilities. This first version runs right in your browser, and your inputs stay on your device.</p>
       </div>
-      <div class="about-note"><span class="tiny-dot"></span> <span data-i18n="version">VERSION 2.1</span> <span class="note-line"></span> <span data-i18n="madeFor">MADE FOR GAMERS</span></div>
+      <div class="about-note"><span class="tiny-dot"></span> <span data-i18n="version">VERSION 2.2</span> <span class="note-line"></span> <span data-i18n="madeFor">MADE FOR GAMERS</span></div>
     </section>
   </main>
 
@@ -163,6 +167,22 @@
     </section>
   </div>
 
-  <script src="script.js"></script>
+  <div class="modal-backdrop" id="gameModal" hidden>
+    <section class="tool-modal game-modal" role="dialog" aria-modal="true" aria-labelledby="gameTitle">
+      <button class="modal-close" id="gameClose" type="button" data-i18n-aria="closeGame" aria-label="Close">×</button>
+      <div id="gameBody" class="gm"></div>
+    </section>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <nav class="bottom-nav" aria-label="Quick">
+    <a href="#top"><span aria-hidden="true">⌂</span><b data-i18n="navHome">Home</b></a>
+    <a href="#dashboard"><span aria-hidden="true">◧</span><b data-i18n="navDashboard">Dashboard</b></a>
+    <a href="#library"><span aria-hidden="true">▦</span><b data-i18n="navLibrary">Library</b></a>
+    <a href="#tools"><span aria-hidden="true">✳</span><b data-i18n="navTools">Tools</b></a>
+  </nav>
+
+  <script src="games.js?v=2.2"></script>
+  <script src="script.js?v=2.2"></script>
+  <script src="extras.js?v=2.2"></script>
 </body>
 </html>

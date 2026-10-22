@@ -24,7 +24,7 @@ const translations = {
     noResults: "No tools match that search. Try another keyword.", builtFor: "BUILT FOR THE PLAYERS",
     aboutTitle: "Less setup.<br><span>More game time.</span>",
     aboutCopy: "Veyzo Hub is a growing collection of lightweight gaming utilities. This first version runs right in your browser, and your inputs stay on your device.",
-    version: "VERSION 2.1", madeFor: "MADE FOR GAMERS", footerTag: "Play smarter. Level up.", modalEyebrow: "VEYZO HUB TOOL",
+    version: "VERSION 2.2", madeFor: "MADE FOR GAMERS", footerTag: "Play smarter. Level up.", modalEyebrow: "VEYZO HUB TOOL",
     langButton: "فارسی", langAria: "تغییر زبان به فارسی",
     sensitivityIntro: "Calculate your effective DPI (eDPI), a simple way to compare aim sensitivity.",
     mouseDpi: "Mouse DPI", inGameSens: "In-game sensitivity", edpiLabel: "YOUR EFFECTIVE DPI", invalidNumbers: "Enter positive numbers in both fields.",
@@ -66,7 +66,7 @@ const translations = {
     noResults: "ابزاری پیدا نشد. عبارت دیگری رو امتحان کن.", builtFor: "ساخته‌شده برای گیمرها",
     aboutTitle: "آماده‌سازی کمتر.<br><span>زمان بیشتر برای بازی.</span>",
     aboutCopy: "Veyzo Hub مجموعه‌ای در حال گسترش از ابزارهای سبک گیمینگ است. این نسخه در مرورگر اجرا می‌شود و ورودی‌های تو روی دستگاه خودت می‌مانند.",
-    version: "نسخه ۲٫۱", madeFor: "ساخته‌شده برای گیمرها", footerTag: "هوشمندانه بازی کن. پیشرفت کن.", modalEyebrow: "ابزار Veyzo Hub",
+    version: "نسخه ۲٫۲", madeFor: "ساخته‌شده برای گیمرها", footerTag: "هوشمندانه بازی کن. پیشرفت کن.", modalEyebrow: "ابزار Veyzo Hub",
     langButton: "English", langAria: "Switch to English",
     sensitivityIntro: "eDPI مؤثر رو حساب کن؛ راهی ساده برای مقایسه‌ی حساسیت نشانه‌گیری.",
     mouseDpi: "DPI موس", inGameSens: "حساسیت داخل بازی", edpiLabel: "eDPI مؤثر شما", invalidNumbers: "در هر دو کادر عددی بزرگ‌تر از صفر وارد کن.",
@@ -147,6 +147,7 @@ function applyLanguage(lang, persist = true) {
 
   // Re-render the tool only if it is actually open (this was the cause of the "FPS panel pops up" bug)
   if (!backdrop.hidden && openToolName) renderTool(openToolName, { refreshing: true });
+  if (typeof onLangChange === "function") onLangChange(); // defined in extras.js
 }
 
 function detectLanguage() {
@@ -217,6 +218,7 @@ const games = [
   { id: "minecraft", name: "Minecraft (Java)", factor: 1.4 }, { id: "warzone", name: "Call of Duty: Warzone", factor: 0.62 },
   { id: "rdr2", name: "Red Dead Redemption 2", factor: 0.55 }, { id: "overwatch2", name: "Overwatch 2", factor: 1.2 }
 ];
+LIB.forEach(l => { if (!games.some(g => g.id === l.id)) games.push({ id: l.id, name: l.n, factor: LIB_FPS_FACTORS[l.id] || 1 }); });
 const cpuTiers = [{ id: "entry", factor: .62, label: "entryCpu" }, { id: "mid", factor: 1, label: "midCpu" }, { id: "high", factor: 1.28, label: "highCpu" }];
 const gpuTiers = [{ id: "entry", factor: .48, label: "entryGpu" }, { id: "mid", factor: 1, label: "midGpu" }, { id: "high", factor: 1.55, label: "highGpu" }, { id: "enthusiast", factor: 2.1, label: "enthusiastGpu" }];
 const resolutionFactors = { "720p": 1.35, "1080p": 1, "1440p": .72 };
