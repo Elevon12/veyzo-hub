@@ -24,7 +24,7 @@ const translations = {
     noResults: "No tools match that search. Try another keyword.", builtFor: "BUILT FOR THE PLAYERS",
     aboutTitle: "Less setup.<br><span>More game time.</span>",
     aboutCopy: "Veyzo Hub is a growing collection of lightweight gaming utilities. This first version runs right in your browser, and your inputs stay on your device.",
-    version: "VERSION 2.4", madeFor: "MADE FOR GAMERS", footerTag: "Play smarter. Level up.", modalEyebrow: "VEYZO HUB TOOL",
+    version: "VERSION 2.5", madeFor: "MADE FOR GAMERS", footerTag: "Play smarter. Level up.", modalEyebrow: "VEYZO HUB TOOL",
     langButton: "فارسی", langAria: "تغییر زبان به فارسی",
     sensitivityIntro: "Calculate your effective DPI (eDPI), a simple way to compare aim sensitivity.",
     mouseDpi: "Mouse DPI", inGameSens: "In-game sensitivity", edpiLabel: "YOUR EFFECTIVE DPI", invalidNumbers: "Enter positive numbers in both fields.",
@@ -66,7 +66,7 @@ const translations = {
     noResults: "ابزاری پیدا نشد. عبارت دیگری رو امتحان کن.", builtFor: "ساخته‌شده برای گیمرها",
     aboutTitle: "آماده‌سازی کمتر.<br><span>زمان بیشتر برای بازی.</span>",
     aboutCopy: "Veyzo Hub مجموعه‌ای در حال گسترش از ابزارهای سبک گیمینگ است. این نسخه در مرورگر اجرا می‌شود و ورودی‌های تو روی دستگاه خودت می‌مانند.",
-    version: "نسخه ۲٫۴", madeFor: "ساخته‌شده برای گیمرها", footerTag: "هوشمندانه بازی کن. پیشرفت کن.", modalEyebrow: "ابزار Veyzo Hub",
+    version: "نسخه ۲٫۵", madeFor: "ساخته‌شده برای گیمرها", footerTag: "هوشمندانه بازی کن. پیشرفت کن.", modalEyebrow: "ابزار Veyzo Hub",
     langButton: "English", langAria: "Switch to English",
     sensitivityIntro: "eDPI مؤثر رو حساب کن؛ راهی ساده برای مقایسه‌ی حساسیت نشانه‌گیری.",
     mouseDpi: "DPI موس", inGameSens: "حساسیت داخل بازی", edpiLabel: "eDPI مؤثر شما", invalidNumbers: "در هر دو کادر عددی بزرگ‌تر از صفر وارد کن.",
@@ -232,6 +232,7 @@ const state = {
   fps: { game: "", cpu: "mid", gpu: "mid", ram: "16", res: "1080p", quality: "medium", estimated: false }
 };
 
+const extraTools = {}; // extra tools register themselves here (see extras2.js)
 const titleKeys = { sensitivity: "titleSensitivity", storage: "titleStorage", picker: "titlePicker", fps: "titleFps" };
 const introKeys = { sensitivity: "sensitivityIntro", storage: "storageIntro", picker: "pickerIntro", fps: "fpsIntro" };
 
@@ -251,7 +252,7 @@ function renderTool(name, { refreshing }) {
   modalTitle.textContent = t(titleKeys[name]);
   modalIntro.textContent = t(introKeys[name]);
   modalBody.innerHTML = "";
-  ({ sensitivity: renderSensitivity, storage: renderStorage, picker: renderPicker, fps: renderFps })[name]();
+  ({ sensitivity: renderSensitivity, storage: renderStorage, picker: renderPicker, fps: renderFps, ...extraTools })[name]();
   if (!refreshing) $("#modalClose").focus();
 }
 

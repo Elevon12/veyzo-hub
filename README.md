@@ -14,6 +14,7 @@ Static site (HTML, CSS, JavaScript), English and Persian, no build step, no back
 | `script.js` | Language switch, search, and the four tools |
 | `games.js` | Game library data (16 games) + generated cover art. Add a game by adding one line to `LIB`. |
 | `extras.js` | Dashboard, Game Library, saved settings, animations |
+| `extras2.js` | Live background, game pages (`#/game/<id>`), Sensitivity Converter, Download Time, profile + backup |
 | `404.html` | Custom "page not found" page (GitHub Pages uses it automatically) |
 | `favicon.svg`, `apple-touch-icon.png` | Site icons |
 | `og-image.png` | Preview image when the link is shared |
